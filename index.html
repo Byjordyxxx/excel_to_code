@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Cálculo de Ingresos Mensuales</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        header, footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: center;
+        }
+        th {
+            background-color: #6c757d;
+            color: white;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 0.25rem;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de Ingresos</h1>
+    </header>
+
+    <main class="container">
+        <h2>Cálculo de Ingresos Mensuales</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sueldo Básico</th>
+                        <th><input type="number" id="inp_sueldob" value="1700"></th>
+                        <th>Mes Laboral</th>
+                        <th><input type="number" id="inp_mes_lab" value="30" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asignación Familiar</td>
+                        <td><input type="number" id="inp_asignacionf" disabled></td>
+                        <td>
+                            <select id="select_asignacionf" class="form-select">
+                                <option value="no">NO</option>
+                                <option value="si">SI</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Total Básico</td>
+                        <td><input type="number" id="inp_total_basico" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Cálculo de Horas Extras</h2>
+        <div class="mb-3">
+            <h5>Valor por hora</h5>
+            <input type="number" id="valor_ph" disabled>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sobre Tasa de Horas Ex.</th>
+                        <th>25%</th>
+                        <th>35%</th>
+                        <th>100%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Valor por hora Extra</td>
+                        <td><input type="number" id="vphe_25" disabled></td>
+                        <td><input type="number" id="vphe_35" disabled></td>
+                        <td><input type="number" id="vphe_100" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Horas Extra Realizadas</td>
+                        <td><input type="number" id="her_25"></td>
+                        <td><input type="number" id="her_35"></td>
+                        <td><input type="number" id="her_100"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Horas Extra (S/.)</td>
+                        <td><input type="number" id="thesoles_25" disabled></td>
+                        <td><input type="number" id="thesoles_35" disabled></td>
+                        <td><input type="number" id="thesoles_100" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button id="btn_calcular">Calcular</button>
+    </main>
+
+    <footer>
+        <p>© 2024 Calculadora de Ingresos</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
